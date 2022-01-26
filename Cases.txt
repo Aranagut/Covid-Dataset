@@ -1,0 +1,17 @@
+
+
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+data = pd.read_csv(r”C:\Users\personal\Downloads\Latest Covid-19 India Status.csv”)
+data.head()
+data.columns()
+data.tails()
+data.describe()
+data.isnull().sum()
+sns.relplot(x=‘Total Cases’, y=‘Discharged’, kind=‘line’ data=data)
+sns.pairplot(data)
+sns.relplot(x=‘Total Cases’, y=‘Active’, kind=‘line’, data=data)
+sns.relplot(x=‘Total Cases’, y=‘Discharged’, kind=‘line’, data=data)
+sns.relplot(x=‘Total Cases’, y=‘Deaths’, kind=‘line’, data=data)
